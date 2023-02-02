@@ -14,7 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-red-100 light:bg-red-900">
+        <img src="assets/img/portfolio/chicken bg.png" />
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -30,6 +30,6 @@
             <main>
                 {{ $slot }}
             </main>
-        </div>
+        </img>
     </body>
 </html>
