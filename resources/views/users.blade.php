@@ -12,7 +12,7 @@
                     
 
 
-                    <h1>Welcome! {{ Auth::user()->name }}, How can we help you? </h1>
+                  
 
 
 
