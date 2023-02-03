@@ -1,7 +1,7 @@
 <x-app-layout>
        <x-slot name="header">
-            <h2 class="font-bold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('RedWhisk') }} 
+            <h2 class="font-bold text-xl text-black-800 dark:text-black-200 leading-tight">
+            {{ __('Menu') }} 
             </h2>
         </x-slot>
 
