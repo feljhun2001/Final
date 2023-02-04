@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('homepage');
 });
-Route::get('/menu', function () {
-    return view('menu');
-})->middleware(['auth', 'verified'])->name('menu');
+Route::get('/home', function () {
+    return view('home');
+})->middleware(['auth', 'verified'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -28,6 +28,12 @@ Route::get('/dashboard', function () {
 
 Route::get('/users', [UserController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('users');
+
+Route::get('/users/add', [UserController::class, 'form'])
+    ->middleware(['auth', 'verified']);
+
+Route::post('/users/add', [UserController::class, 'store'])
+    ->middleware(['auth', 'verified']);
 
 
 
