@@ -26,8 +26,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/pricing', function () {
+    return view('pricing');
+})->middleware(['auth', 'verified'])->name('pricing');
+
 Route::get('/users', [UserController::class, 'index'])
-    ->middleware(['auth', 'verified'])->name('users');
+    ->middleware(['auth', 'verified'])
+    ->name('users');
 
 Route::get('/users/add', [UserController::class, 'form'])
     ->middleware(['auth', 'verified']);

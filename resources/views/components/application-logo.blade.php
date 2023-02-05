@@ -1,1 +1,1 @@
-<img src="assets/img/portfolio/redwhiskLCreverse.png" width="90px" />
+<img src="assets/img/portfolio/CTG.png" width="90px" />
