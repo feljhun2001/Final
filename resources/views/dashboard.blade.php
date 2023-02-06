@@ -14,17 +14,17 @@
                     
                     <h1>Welcome! {{ Auth::user()->name }}, How can we help you?</h1>
                     
-                    <div class="w-full" >
-                        <img src="assets/img/portfolio/Chicken 1.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 2.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 3.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 4.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 5.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 6.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 7.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 8.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 9.png" width="900px" />
-                        <img src="assets/img/portfolio/Chicken 10.png" width="900px" />
+                    <div class="content-center p-28" >
+                        <img src="assets/img/portfolio/Chicken 1.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 2.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 3.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 4.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 5.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 6.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 7.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 8.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 9.png" width="980px" />
+                        <img src="assets/img/portfolio/Chicken 10.png" width="980px" />
                     </div>    
                     
 

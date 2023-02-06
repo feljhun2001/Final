@@ -14,8 +14,8 @@
 
                     <h1>Announcements</h1>
                     
-                    <div>
-                        <img src="assets/img/portfolio/CTG.png" />
+                    <div class="content-center p-28">
+                        <img src="assets/img/portfolio/CTG Announcement.png"/>
                     </div>
                     
 

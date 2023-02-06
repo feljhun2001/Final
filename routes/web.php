@@ -26,9 +26,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/pricing', function () {
-    return view('pricing');
-})->middleware(['auth', 'verified'])->name('pricing');
+Route::get('/products', function () {
+    return view('products');
+})->middleware(['auth', 'verified'])->name('products');
 
 Route::get('/users', [UserController::class, 'index'])
     ->middleware(['auth', 'verified'])
@@ -38,6 +38,15 @@ Route::get('/users/add', [UserController::class, 'form'])
     ->middleware(['auth', 'verified']);
 
 Route::post('/users/add', [UserController::class, 'store'])
+    ->middleware(['auth', 'verified']);
+
+Route::get('/users/update/{id}', [UserController::class, 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::post('/users/update/{id}', [UserController::class, 'update'])
+    ->middleware(['auth', 'verified']);
+
+Route::post('/users/delete/{id}', [UserController::class, 'update'])
     ->middleware(['auth', 'verified']);
 
 

@@ -20,28 +20,9 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Tastiest - Yummiest - Happiest</p>
+                <p class="masthead-subheading font-weight-light mb-0">Masarap Kahit Walang Sauce</p>
             </div>
         </header>
-        
-        <!-- About Section-->
-        <section class="page-section bg-danger text-warning mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-warning">About</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Roasted chicken floats my boat. It rocks my world, makes my taste buds do a jig and if I am being truthful the aroma of a roasting bird causes my salivary glands to do their job very, very well…in other words, I drool.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Roast chicken is chicken prepared as food by roasting whether in a home kitchen, over a fire, or with a rotisserie (rotary spit). Generally, the chicken is roasted with its own fat and juices by circulating the meat during roasting, and therefore, are usually cooked exposed to fire or heat with some type of rotary grill so that the circulation of these fats and juices is as efficient as possible.</p></div>
-                </div>               
-            </div>
-        </section>
         <!-- Contact Section-->
         <section class="page-section bg-danger text-warning" id="contact">
             <div class="container">
