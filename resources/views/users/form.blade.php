@@ -10,7 +10,7 @@
             <div class="bg-stone dark:bg-stone-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
-                    <form method="POST" action="{{ ( url()->current() == url('/users/add') ) ? url('/users/add'):url('/users/update/' . $user->id) }}">
+                    <form method="POST" action="{{ ( url()->current() == url('/users/add') ) ? url('/users/add') :url('/users/update/' . $user->id) }}">
                         @csrf
 
                         <!-- Name -->

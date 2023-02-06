@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Flight;
+
 
 
 class UserController extends Controller
@@ -73,13 +75,38 @@ class UserController extends Controller
 
         session()->flash('status', 'Updated User Successfully!');
 
-        return redirect('/users/update/' . $user->id);
+        return redirect('/users');
     }
 
     
     public function destroy($id)
     {
-        //
+        $flight = Flight::find($id);
+        
+        return view('users.form', [
+            'header'    => 'Delete User',
+            'user'      => $flight
+        ]);
+        
+
     }
 
-}
+    public function delete(Request $request, $id)
+
+    {
+       
+        $flight = Flight::find($id);
+
+        $flight->update($request->all());
+
+        session()->flash('status', 'Deleted User Successfully!');
+
+        return redirect('/users'); 
+
+
+    }
+
+
+
+
+}    

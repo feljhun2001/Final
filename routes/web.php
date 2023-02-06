@@ -46,8 +46,15 @@ Route::get('/users/update/{id}', [UserController::class, 'show'])
 Route::post('/users/update/{id}', [UserController::class, 'update'])
     ->middleware(['auth', 'verified']);
 
-Route::post('/users/delete/{id}', [UserController::class, 'update'])
+Route::get('/users/delete/{id}', [UserController::class, 'destroy'])
     ->middleware(['auth', 'verified']);
+
+Route::get('/users/delete/{id}', [UserController::class, 'delete'])
+    ->middleware(['auth', 'verified']);
+    
+
+
+  
 
 
 
