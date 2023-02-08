@@ -1,1 +1,3 @@
-<img src="assets/img/portfolio/CTG.png" width="90px" />
+<div>
+    <img src="assets/img/portfolio/CTG.png" width="90px"/>
+</div>

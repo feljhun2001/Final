@@ -51,6 +51,19 @@ Route::get('/users/delete/{id}', [UserController::class, 'destroy'])
 
 Route::get('/users/delete/{id}', [UserController::class, 'delete'])
     ->middleware(['auth', 'verified']);
+
+
+
+Route::get('/home', [HomeController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('home');
+
+
+
+
+
+
+
     
 
 

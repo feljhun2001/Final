@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Flight;
+
 
 
 
@@ -81,11 +81,11 @@ class UserController extends Controller
     
     public function destroy($id)
     {
-        $flight = Flight::find($id);
+        $user = User::find($id);
         
         return view('users.form', [
             'header'    => 'Delete User',
-            'user'      => $flight
+            'user'      => $user
         ]);
         
 
@@ -95,9 +95,9 @@ class UserController extends Controller
 
     {
        
-        $flight = Flight::find($id);
+        $user = User::find($id);
 
-        $flight->update($request->all());
+        $user->delete($request->all());
 
         session()->flash('status', 'Deleted User Successfully!');
 
