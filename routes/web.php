@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,8 +60,23 @@ Route::get('/home', [HomeController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('home');
 
+Route::get('/home/add', [HomeController::class, 'form'])
+    ->middleware(['auth', 'verified']);
 
+Route::post('/home/add', [HomeController::class, 'store'])
+    ->middleware(['auth', 'verified']);
 
+Route::get('/home/update/{id}', [HomeController::class, 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::post('/home/update/{id}', [HomeController::class, 'update'])
+    ->middleware(['auth', 'verified']);
+
+Route::get('/home/delete/{id}', [HomeController::class, 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::get('/home/delete/{id}', [HomeController::class, 'delete'])
+    ->middleware(['auth', 'verified']);
 
 
 

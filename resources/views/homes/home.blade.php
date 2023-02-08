@@ -22,33 +22,32 @@
                             Add Announcement
                         </button>
                     </a>
-
-                    <h1>Announcements</h1>
                     
+                    <h1>Announcement</h1>
+
                     <table class="table-auto w-full m-5">
                         <thead>
                             <tr>
-                            <th>Song</th>
-                            <th>Artist</th>
-                            <th>Year</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                                <td>Malcolm Lockyer</td>
-                                <td>1961</td>
-                            </tr>
-                            <tr>
-                                <td>Witchy Woman</td>
-                                <td>The Eagles</td>
-                                <td>1972</td>
-                            </tr>
-                            <tr>
-                                <td>Shining Star</td>
-                                <td>Earth, Wind, and Fire</td>
-                                <td>1975</td>
-                            </tr>
+                            @foreach ($home as $product)
+                                <tr>
+                                    <td> {{ $product->header }} </td>
+                                    <td class="text-center">{{ $product->description }}</td>
+                                        <td class="text-center">
+                                            <a href="{{ url('/home/update/' . $product->id) }}">
+                                                <button class="rounded-full bg-red-900 border-black border-2 p-1 hover:bg-sky-700">Update</button>
+                                            </a>
+                                            <a href="{{ url('/home/delete/' . $product->id) }}">
+                                                <button class="rounded-full bg-red-900 border-black border-2 p-1 hover:bg-sky-700">Delete</button>
+                                            </a>
+                                        </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
 
