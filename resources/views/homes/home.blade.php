@@ -25,24 +25,24 @@
                     
                     <h1>Announcement</h1>
 
-                    <table class="table-auto w-full m-5">
+                    <table class="table-auto w-full m-5 p-6">
                         <thead>
                             <tr>
-                            <th>Name</th>
+                            <th>Title</th>
                             <th>Description</th>
                             <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($home as $product)
+                            @foreach ($home as $announcement)
                                 <tr>
-                                    <td> {{ $product->header }} </td>
-                                    <td class="text-center">{{ $product->description }}</td>
+                                    <td> {{ $announcement->name }} </td>
+                                    <td class="text-center">{{ $announcement->description }}</td>
                                         <td class="text-center">
-                                            <a href="{{ url('/home/update/' . $product->id) }}">
+                                            <a href="{{ url('/home/update/' . $announcement->id) }}">
                                                 <button class="rounded-full bg-red-900 border-black border-2 p-1 hover:bg-sky-700">Update</button>
                                             </a>
-                                            <a href="{{ url('/home/delete/' . $product->id) }}">
+                                            <a href="{{ url('/home/delete/' . $announcement->id) }}">
                                                 <button class="rounded-full bg-red-900 border-black border-2 p-1 hover:bg-sky-700">Delete</button>
                                             </a>
                                         </td>

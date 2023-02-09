@@ -1,5 +1,5 @@
 <x-app-layout>
-       <x-slot name="header">
+        <x-slot name="header">
             <h2 class="font-bold text-xl text-black-800 dark:text-black-200 leading-tight">
                 {{ $header }}
             </h2>

@@ -10,7 +10,7 @@
             <div class="bg-stone dark:bg-stone-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100"> 
                     
-                    <form method="POST" action="{{ ( url()->current() == url('/home/add') ) ? url('/home/add') :url('/home/update' . $product->id) }}">
+                    <form method="POST" action="{{ ( url()->current() == url('/home/add') ) ? url('/home/add'):url('/home/update/' . $announcement->id) }}">
                         @csrf
 
                         
@@ -18,14 +18,14 @@
                         <!-- Name -->
                         <div>
                             <x-input-label for="name" :value="__('Name')" />
-                            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="( url()->current() == url('/home/add') ) ? old('name'):$product->name" required autofocus />
+                            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="( url()->current() == url('/home/add') ) ? old('name'):$announcement->name" required autofocus />
                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
 
                         <!-- Description -->
                         <div class="mt-4 text-black">
                             <x-input-label for="description" :value="__('Description')" />
-                            <x-text-input id="description" class="block mt-1 w-full" type="text" name="description" :value="( url()->current() == url('/home/add') ) ? old('description'):$product->description" required />
+                            <x-text-input id="description" class="block mt-1 w-full" type="text" name="description" :value="( url()->current() == url('/home/add') ) ? old('description'):$announcement->description" required />
                             <x-input-error :messages="$errors->get('description')" class="mt-2" />
                         </div>
                         
