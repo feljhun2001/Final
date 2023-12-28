@@ -42,7 +42,7 @@ class HomeController extends Controller
 
         session()->flash('status', 'Added Announcement Successfully!');
 
-        // Redirect to the List of Users
+        // Redirect to the Home
         return redirect('/home');
     }
 

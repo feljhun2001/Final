@@ -1,9 +1,19 @@
+
 <x-app-layout>
        <x-slot name="header">
             <h2 class="font-bold text-xl text-white dark:text-black-200 leading-tight">
                 {{ __('Users') }} 
             </h2>
+
+           
         </x-slot>
+        
+        <form class="form-inline my-2 my-lg-0 mb-2 ml-8" type="get" action="{{ url('/search') }}">
+            <input type="search" name="search" class="form-control mr-sm-2" placeholder="Search..." >
+            <button type="submit" class=" btn btn-outline-light my-2 my-sm-0 hover:bg-sky-700">Search</button>
+        </form>
+
+        
 
         <div class="py-12">
             @if ( session('status') )
@@ -13,16 +23,16 @@
                     </div> 
                 </div>
             @endif
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-yellow-500 dark:bg-stone-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-4">
+                <div class="bg-yellow-500 overflow-hidden shadow-sm sm:rounded-lg mb-20">
                     <div class="p-6 text-white dark:text-gray-100">
                         
                         <h2 class="float-left">
-                            {{ $header }}
+                            <h1>User Management</h1>
                         </h2>
                         
                         <a href="{{ url('/users/add') }}">
-                            <button class="float-right rounded-full border-black border-2 bg-red-900 p-1 hover:bg-slate-400">
+                            <button class="float-right rounded-full border-black border-2 bg-red-900 p-1 hover:bg-sky-700">
                                 Add Users
                             </button>
                         </a>

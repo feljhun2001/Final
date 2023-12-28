@@ -18,7 +18,7 @@
                 <div class="bg-yellow-500 text-2xl p-5 text-white dark:text-black-100">
          
                     <a href="{{ url('/home/add') }}">
-                        <button class="float-right rounded-full border-black border-2 bg-red-900 p-1 hover:bg-slate-400">
+                        <button class="float-right rounded-full border-black border-2 bg-red-900 p-1 hover:bg-sky-700">
                             Add Announcement
                         </button>
                     </a>
